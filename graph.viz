@@ -1,0 +1,28 @@
+
+digraph g {
+	rankdir=LR;
+	damping=0.7;
+	center=true;
+	concentrate=true;
+	remincross=true;
+	normalize=true;
+	overlap=false;
+graph [	concentrate= "true" bgcolor="#EFEFEF" rankdir = "LR" ];
+node  [  shape = "ellipse" ];
+edge  [	];
+	"blogs" [ fontname=helvetica fontsize=10 label = "Blogs|<idblog> id_blog |<strPost> strPost |<datPosted> datPosted |<strPoster> strPoster |<strTitle> strTitle"	shape = "record" ]
+	"blogs_x_tags" [ fontname=helvetica fontsize=10 label = "Blogs_x_tags|<idblogtag> id_blogtag"	shape = "record" ]
+	"profiles" [ fontname=helvetica fontsize=10 label = "Profiles|<idprofile> id_profile |<UserName> UserName |<Password> Password |<Name> Name |<Bike> Bike |<BikeType> BikeType |<Location> Location |<Birthday> Birthday |<Country> Country |<Unit> Unit |<Validated> Validated |<Email> Email |<CounterStart> CounterStart"	shape = "record" ]
+	"replies" [ fontname=helvetica fontsize=10 label = "Replies|<idreply> id_reply |<strPoster> strPoster |<strEmail> strEmail |<datPosted> datPosted |<strIp> strIp |<strReply> strReply"	shape = "record" ]
+	"routes" [ fontname=helvetica fontsize=10 label = "Routes|<idroute> id_route |<From> From |<To> To |<Coordsfrom> Coords_from |<Coordsto> Coords_to |<Via> Via |<Description> Description"	shape = "record" ]
+	"tags" [ fontname=helvetica fontsize=10 label = "Tags|<idtag> id_tag |<strTag> strTag"	shape = "record" ]
+	"trips" [ fontname=helvetica fontsize=10 label = "Trips|<idtrip> id_trip |<Date> Date |<Distance> Distance |<Weather> Weather |<Wind> Wind |<AvgSpeed> Avg_Speed |<MaxSpeed> Max_Speed |<Odo> Odo |<Comment> Comment"	shape = "record" ]
+	blogs -> replies[constraint=true];
+	profiles -> routes[constraint=true];
+	replies -> blogs[constraint=true];
+	routes -> profiles[constraint=true];
+	blogs -> blogs_x_tags -> tags[constraint=true];
+	profiles -> trips -> routes[constraint=true];
+	routes -> trips -> profiles[constraint=true];
+	tags -> blogs_x_tags -> blogs[constraint=true];
+}

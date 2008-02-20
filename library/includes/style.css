@@ -1,0 +1,354 @@
+body 
+{
+	margin:0;
+	padding:0;
+	background-color: #d2d2ca;
+	color: black;
+	font-family: Arial;
+	font-size: 10pt;
+	behavior: url("./includes/csshover.htc");
+	background-image: url('./../images/background.jpg');
+	background-repeat: repeat-x;
+	background-color: black;
+}
+
+FIELDSET
+{
+    border: 1px solid black;
+	background-image: url('./../images/header.jpg');
+	background-repeat: repeat-x;
+	background-color: #91B9DC;
+  	padding: 5px;
+}
+
+#menu
+{
+  float: left;
+  height: auto;
+  margin: 20px;	
+  background-image: url('./../images/header.jpg');
+  background-repeat: repeat-x;
+  background-color: #91B9DC;
+  z-index: 10;
+}
+
+#menu UL UL, #menu UL
+{
+  position: relative;
+  list-style-type: none;
+  margin:0;
+  padding: 2px;
+}
+
+#menu UL
+{
+	list-style-type: square;
+	padding-left: 20px;
+}
+
+#menu UL UL
+{
+ display: none;
+
+}
+
+#menu UL
+{
+	border: 1px solid black;
+}
+
+#menu UL LI
+{
+    padding: 2x;
+    color: black;
+    width: 150px;
+}
+
+#menu STRONG
+{
+	font-weight: normal;
+	display:block;
+	cursor: pointer;
+	text-transform: capitalize;
+}
+
+#menu LI STRONG:hover
+{
+	margin-left: 10px;
+	font-weight:bold;
+}
+
+#wrap #header
+{
+	background-image: url("./../images/header.jpg");
+	height: 155px;
+	background-repeat: repeat-x;
+	border-bottom:  2px solid black;
+	margin-top: 30px;
+	margin-bottom: 15	px;
+	
+}
+
+#wrap #title
+{
+	background-image: url("./../images/pork.png");
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	height: 155px;
+	line-height: 155px;
+	padding-left: 25px;
+	font-family: georgia;
+	font-size: 65pt;
+	vertical-align: middle;
+	color: black;
+}
+
+#title P
+{
+	font-size: 10pt;
+	position: relative;
+	display:inline;
+}
+
+#content
+{
+	width: auto;
+	margin: 20px;
+	margin-right: 50px;
+}
+
+.body
+{
+	margin-left: 200px;
+}
+
+#content FIELDSET
+{
+width: 100%;
+	
+}
+
+#menu
+{
+	z-index: 500;
+}
+
+#menu UL LI:hover UL
+{
+	display: block;
+}
+
+
+#menu UL LI UL
+{
+	background-image: url("./../images/header.jpg");
+	background-color: #EAF6E2;
+	background-repeat: repeat-x;
+	position: absolute;
+	display: none;
+	width: 200px;
+	left: 100px;
+	margin-top: -15px;
+	z-index: 200;
+	border: 1px solid black;
+}
+
+#menu UL UL A
+{
+	color: black;
+	font-size: 9pt;
+	text-transform: capitalize;
+	text-decoration: none;
+}
+
+#menu UL UL A:hover
+{
+	text-decoration: underline;
+}
+
+#menu UL UL 
+{
+	list-style-type: disc;
+	padding-left: 15px;
+}
+
+FIELDSET FIELDSET
+{
+	background-image: url('./../images/background.jpg');
+	background-repeat: repeat-x;
+	background-color: black;	
+	width: 60% !important;
+}
+
+LEGEND, .searchButton
+{
+	padding: 5px;
+	font-weight: normal;
+	border: 1px solid black;
+	background-color: black;	
+	text-transform: capitalize;
+	color: white;
+	background-image: url('./../images/fieldsetheader.jpg');
+	background-repeat: repeat-x;
+	background-color: #91B9DC;
+}
+
+.searchButton
+{
+	display: block;
+	width: 70px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+.searchbox
+{
+	margin: 5px;
+}
+
+.ajaxtable tbody TD
+{
+	
+
+}
+
+.ajaxtable TABLE thead, .ajaxtable TABLE tfoot
+{
+	background-image: url('./../images/fieldsetheader.jpg');
+	color: white;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.ajaxtable TABLE tbody 
+{
+	border-color: black;
+	background-image: url('./../images/fieldback.jpg');
+	background-repeat: repeat-x;
+	background-color: #EFEFEF;
+	width: 100%;
+}
+
+.ajaxtable tfoot TD A
+{
+	color: white;
+	font-weight: bold;
+}
+.ajaxtable tbody TD A
+{
+	color: black; 
+	text-decoration: none;
+}
+
+.ajaxtable tbody TR:hover
+{
+	background-color: #CDCDCD;
+	z-index: 2;
+}
+
+
+
+.relations
+{
+	margin-left: 5px;
+}
+
+.relations STRONG
+{
+	font-size: 15px;
+}
+
+.relations LI
+{
+	
+	border-bottom: 1px solid #000000;
+	display:block;
+	margin: 5px;
+	padding: 10px;
+}
+
+.relations UL LI
+{
+	padding: 5px;
+	background-color: #EFEFEF;
+	margin-left: 0;
+	border: 1px solid black;
+	background-image:url('./../images/inputback.jpg');
+	background-repeat: repeat-x;
+	position:relative;
+}
+
+.relations UL LI:hover
+{
+	
+	border: 1px dotted black;
+	background-position: 0px 35px;
+}
+
+
+.relations UL
+{
+	margin-left: 0;
+	padding:0;
+
+}
+
+.relations .editor
+{
+	background-image: none;
+	background-color: transparent;
+	border: 0;
+}
+
+.relations .editor:hover
+{
+	border: 0;
+}
+
+.notconnected LI
+{
+	cursor: pointer;
+}
+
+.notconnected LI:hover
+{
+	margin-left: 2px;
+}
+
+
+.links A
+{
+	color: black;
+	border: 1px solid black;
+	background-color: #EFEFEF;
+	padding: 2px;
+	text-decoration:none;
+}
+
+.editorlink
+{
+	color: black;
+}
+
+.links
+{
+	visibility:hidden;
+}
+
+.links A:hover
+{
+	border: 1px dotted black;
+}
+
+.relations LI STRONG
+{
+	text-transform: capitalize;
+}
+
+.text
+{
+	width: 300px;
+}
+
+
