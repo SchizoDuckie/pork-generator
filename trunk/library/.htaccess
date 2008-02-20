@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteBase /
+
+RewriteRule ^includes/ - [L] [OR] #niet toepassen op directe requests naar /includes of 
+RewriteRule ^images/ - [L] #niet toepassen op directe requests naar /images
+
+RewriteRule ^(([^/]+)/){1,}([^/]+)?$ index.php [L]

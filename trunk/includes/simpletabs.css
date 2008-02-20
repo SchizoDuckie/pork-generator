@@ -1,0 +1,67 @@
+.tab-wrapper
+{
+	padding:				4px;
+	border:					1px solid black;
+	border-top: none;
+	margin: 0;
+	width: 400px;
+
+
+}
+.tab-menu
+{
+	list-style:				none;
+	padding:				0;
+	clear:					both;
+	line-height:			20px;
+	font-size:				12px;
+	border-bottom: 1px solid black;
+	height: 20px;
+	margin-bottom: 0;
+	margin: 0;
+	width: 410px;
+}
+.tab-menu li
+{
+	display:				block;
+	float: left;
+	margin:					0;
+	z-index:2;
+	height: 20px;
+	top: -1px;
+	position: relative;
+	border: 1px solid navy;
+	margin-right: 4px;
+
+
+}
+
+.tab-menu li:hover
+{
+	border-bottom: 1px solid white;
+}
+
+.tab-menu li a
+{
+	padding:				1px 5px;
+	margin: 1px;
+	background-color:		#f5f5f5;
+	color:					#222;
+	font-weight:			bold;
+	text-decoration:		none;
+}
+.tab-menu li a:hover,
+.tab-menu li a:focus
+{
+	background-color:		#CDCDCD;
+	border-bottom-color:	#FFFFFF;
+}
+.tab-menu li a:hover
+{
+	background-color:		#CDCDCD;
+	border-bottom-color:	#999;
+}
+.tab-menu li.tab-selected
+{
+	border-bottom: 1px solid white;
+}

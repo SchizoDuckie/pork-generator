@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteBase /Pork.Generator
+
+RewriteRule ^includes/ - [L] [OR] #niet toepassen op directe requests naar /includes of 
+RewriteRule ^images/ - [L] [OR] #niet toepassen op directe requests naar /images
+RewriteRule ^output/ - [L] [OR] #niet toepassen op directe requests naar /output
+RewriteRule ^welcome.html - [L] [OR] #niet toepassen op directe requests naar /welcome.html
+RewriteRule ^connect.html - [L] [OR] #niet toepassen op directe requests naar /connect.html
+RewriteRule ^relations.gif - [L] #niet toepassen op directe requests naar /images
+
+RewriteRule ^(([^/]+)/){1,}([^/]+)?$ index.php [L]
