@@ -303,7 +303,7 @@ class databaseAnalyzer
 			{
 				if(array_key_exists($currentTable, $rellines[$connectedTable]) !== false)
 				{
-					unset($rellines[$connectedTable][$currentTable]);
+				//	unset($rellines[$connectedTable][$currentTable]);
 				}
 			}
 		}
