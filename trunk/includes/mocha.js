@@ -1226,29 +1226,6 @@ MochaWindowForm.implement(new Options);
 
 
 
-window.addEvent('load', function(){
-		document.mochaScreens = new MochaScreens();
-		document.mochaDesktop = new MochaDesktop();
-		
-
-$$('#mochaDesktopNavbar UL UL A').each(function(el){
-	
-	el.addEvent('click', function(e) {
-		new Event(e).stop();
-		document.mochaDesktop.newWindow({
-				id: 'database_'+this.innerHTML,
-				title: 'Database: '+this.innerHTML,
-				loadMethod: 'xhr',
-				contentURL: this.href,
-				width: 320,
-				height: 320,
-		});
-	});
-	
-});	
-});
-
-
 function autoWidth(el) {
 	var size = el.getElement('.mochaScroller').getScrollSize();
 	var newSize = size.x < 600 ? size.x : 600;
