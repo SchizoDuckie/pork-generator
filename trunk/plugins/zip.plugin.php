@@ -21,11 +21,10 @@ switch($_URI[0])
 				$filelist = $zip->globr('./output/', '*.php','./output');
 				$templatelist = $zip->globr('./library', '*.*', './library');
 						
-				foreach ($analyzer->virtuals as $table=>$virtualObject)
+				foreach ($analyzer->virtuals as $table)
 				{
-					$generator = new classGenerator($virtualObject);
-					$zip->add_file($generator->createClass($analyzer->virtuals), "includes/class.{$generator->name}.php");
-					$zip->add_file($generator->createPlugin(), "plugins/{$generator->name}.plugin.php");
+					$zip->add_file($table->createClass(), strtolower("includes/class.{$table->name}.php"));
+					$zip->add_file($table->createPlugin(), strtolower("plugins/{$table->name}.plugin.php"));
 				}
 				
 				foreach ($templatelist as $file)
@@ -48,10 +47,9 @@ switch($_URI[0])
 				@unlink('./output/output.zip');
 				$zip = new zipfile('./output/output.zip');
 			
-				foreach ($analyzer->virtuals as $table=>$virtualObject)
+				foreach ($analyzer->virtuals as $table)
 				{
-					$generator = new classGenerator($virtualObject);
-					$zip->add_file($generator->createClass($analyzer->virtuals), "class.{$generator->name}.php");
+					$zip->add_file($table->createClass(), strtolower("class.{$table->name}.php"));
 				}
 				$zip->write();
 				header("location: {$_TPL['baseDir']}output/output.zip");
@@ -63,11 +61,10 @@ switch($_URI[0])
 				@unlink('./output/output.zip');
 				$zip = new zipfile('./output/output.zip');
 			
-				foreach ($analyzer->virtuals as $table=>$virtualObject)
+				foreach ($analyzer->virtuals as $table)
 				{
-					$generator = new classGenerator($virtualObject);
-					$generator->createClass($analyzer->virtuals);
-					$zip->add_file($generator->createPlugin(), "{$generator->name}.plugin.php");
+					$table->createClass();
+					$zip->add_file($table->createPlugin(), strtolower("{$table->name}.plugin.php"));
 				}
 				$zip->write();
 				header("location: {$_TPL['baseDir']}output/output.zip");
