@@ -39,6 +39,7 @@ switch($_URI[0])
 				$zip->write();
 				$analyzer->generateoptions = $oldoptions;
 				$analyzer->storeToSession();
+				chmod('./output/output.zip', 644);
 				header("location: {$_TPL['baseDir']}output/output.zip");
 			break;
 			case 'classes':
@@ -52,6 +53,7 @@ switch($_URI[0])
 					$zip->add_file($table->createClass(), strtolower("class.{$table->name}.php"));
 				}
 				$zip->write();
+				chmod('./output/output.zip', 644);
 				header("location: {$_TPL['baseDir']}output/output.zip");
 			break;
 			case 'plugins':
@@ -67,6 +69,7 @@ switch($_URI[0])
 					$zip->add_file($table->createPlugin(), strtolower("{$table->name}.plugin.php"));
 				}
 				$zip->write();
+				chmod('./output/output.zip', 644);
 				header("location: {$_TPL['baseDir']}output/output.zip");
 
 			break;
