@@ -54,7 +54,6 @@ window.addEvent('load', function() {
 	
 
 	$$('#mochaDesktopNavbar UL UL A').each(function(el){
-		alert('adding event to '+el)
 		el.addEvent('click', function(e) {
 			new Event(e).stop();
 			document.mochaDesktop.newWindow({
