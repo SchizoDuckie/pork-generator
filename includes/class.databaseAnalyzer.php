@@ -183,11 +183,11 @@ class databaseAnalyzer
 		<h4>Code generation</h4>
 		<div>
 			<p>You can create a .zip file with a complete CRUD <small>(Create, Read, Update Delete)</small> interface for this database with one click.<br> This wraps up any changes you made to property mappings directly into the dbObjects.<br>Note that this gives <em>FULL CONTROL</em> over the contents of your database so beware to deploy behind some sort of authentication. Also note that this will ignore the database wide generation options above because they are needed.</p>
-			<button onclick='($this).getFirst().click()'><a class='nolink' href='./generate/interface/{$this->db}'>Generate CRUD Interface</a></button><br>
+			<button onclick='$(this).getFirst().click()'><a class='nolink' href='./generate/interface/{$this->db}'>Generate CRUD Interface</a></button><br>
 			<p>Generate only all classes in this database to a .zip file. This respects the database wide generation options *and* any changes you made to mappings. Use this if you just want to drop in Pork.dbObject and your data model into your existing project. Note that you could alter the class template in the /templates folder</p>
-			<button onclick='($this).getFirst().click()'><a class='nolink' href='./generate/classes/{$this->db}'>Generate All Classes</a></button>
+			<button onclick='$(this).getFirst().click()'><a class='nolink' href='./generate/classes/{$this->db}'>Generate All Classes</a></button>
 			<p>Generate only all plugins for the classes in this database to a .zip file. Note that you could alter the plugin template in the /templates folder</p>
-			<button onclick='($this).getFirst().click()'><a class='nolink' href='./generate/plugins/{$this->db}'>Generate All Plugins</a></button>
+			<button onclick='$(this).getFirst().click()'><a class='nolink' href='./generate/plugins/{$this->db}'>Generate All Plugins</a></button>
 			</ul>
 
 		</div>
