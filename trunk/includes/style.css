@@ -328,3 +328,14 @@ input[type=text]:focus
 	text-decoration:none;
 	color: black;
 }
+
+A.button
+{
+	background-color: #EFEFEF;
+	color: black;
+	text-decoration: none;
+	border: 1px solid black;
+	padding: 2px;
+	clear: both;
+
+}
