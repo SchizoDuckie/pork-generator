@@ -37,7 +37,7 @@ switch ($_URI[0])
 				$analyzer = DatabaseAnalyzer::getInstance($_URI[2]);
 				
 				$analyzer->virtuals[$_URI[3]]->createClass();
-				die(highlight_string( $generator->createPlugin(), true));
+				die(highlight_string( $analyzer->virtuals[$_URI[3]]->createPlugin(), true));
 			break;
 			case 'savemappings':
 				$analyzer = DatabaseAnalyzer::getInstance($_URI[2]);
